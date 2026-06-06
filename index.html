@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AgroVision AI</title>
+</head>
+
+<body style="text-align:center;font-family:Arial;background:#eaffea;padding:20px">
+
+<h1 style="color:green">🌾 AgroVision AI</h1>
+<p>Smart Crop Disease Detector (Demo)</p>
+
+<input type="file"><br><br>
+
+<button onclick="detect()" style="padding:10px;background:green;color:white;border:none;border-radius:5px">
+Detect Disease
+</button>
+
+<h2 id="result" style="color:blue;margin-top:20px">Result will show here</h2>
+
+<script>
+function detect(){
+  let results = [
+    "🌿 Healthy Plant",
+    "⚠ Rice Blast Disease",
+    "⚠ Brown Spot Disease",
+    "⚠ Leaf Blight Disease"
+  ];
+
+  let r = Math.floor(Math.random()*results.length);
+
+  document.getElementById("result").innerHTML = results[r];
+}
+</script>
+
+</body>
+</html>
